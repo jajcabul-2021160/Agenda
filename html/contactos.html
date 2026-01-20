@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mis Contactos - Agenda Web</title>
+    <link rel="stylesheet" href="../Style/Contactos.css">
+</head>
+<body>
+    <nav class="navbar">
+        <h1>Mi Agenda</h1>
+        <div class="nav-links">
+            <a href="contactos.html" class="active">Contactos</a>
+            <a href="Favoritos.html">Favoritos</a>
+            <a href="Perfil.html">Perfil</a>
+            <a href="ToDoList.html">ToDo List Pendientes</a>
+        </div>
+    </nav>
+
+    <main class="container">
+        <div class="header-section">
+            <h2>Lista de Contactos</h2>
+            <button class="btn-add" onclick="window.location.href='nuevo_contacto.html'">+ Nuevo Contacto</button>
+        </div>
+
+        <div class="contacts-grid">
+            <div class="contact-card" onclick="window.location.href='detalles.html'">
+                <div class="avatar">JP</div>
+                <div class="info">
+                    <h3>Xavier Estrada</h3>
+                    <p>555-0101</p>
+                </div>
+            </div>
+
+            <div class="contact-card" onclick="window.location.href='detalles.html'">
+                <div class="avatar">MG</div>
+                <div class="info">
+                    <h3>Daniel Lopez</h3>
+                    <p>555-0102</p>
+                </div>
+            </div>
+
+            <div class="contact-card" onclick="window.location.href='detalles.html'">
+                <div class="avatar">RL</div>
+                <div class="info">
+                    <h3>Diego Salazar</h3>
+                    <p>555-0103</p>
+                </div>
+            </div>
+
+            <div class="contact-card" onclick="window.location.href='detalles.html'">
+                <div class="avatar">AS</div>
+                <div class="info">
+                    <h3>Matias Quino</h3>
+                    <p>555-0104</p>
+                </div>
+            </div>
+
+            <div class="contact-card" onclick="window.location.href='detalles.html'">
+                <div class="avatar">CM</div>
+                <div class="info">
+                    <h3>Angel Martinez</h3>
+                    <p>555-0105</p>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
