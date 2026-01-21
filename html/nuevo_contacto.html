@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuevo Contacto</title>
+    <link rel="stylesheet" href="../Style/Contactos.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Agregar Nuevo Contacto</h2>
+        <form class="contact-card" style="display: block; cursor: default;">
+            <div class="input-group" style="margin-bottom: 15px;">
+                <label>Nombre Completo</label>
+                <input type="text" style="width: 100%; padding: 8px;" placeholder="Nombre">
+            </div>
+            <div class="input-group" style="margin-bottom: 15px;">
+                <label>Teléfono</label>
+                <input type="tel" style="width: 100%; padding: 8px;" placeholder="7777-7777">
+            </div>
+            <div class="input-group" style="margin-bottom: 15px;">
+                <label>Correo</label>
+                <input type="email" style="width: 100%; padding: 8px;" placeholder="correo@ejemplo.com">
+            </div>
+            <button type="button" class="btn-add" onclick="window.location.href='contactos.html'">Guardar</button>
+            <button type="button" onclick="window.location.href='contactos.html'" style="background: #ccc; border:none; padding:10px; border-radius:5px;">Cancelar</button>
+        </form>
+    </div>
+</body>
+</html>
