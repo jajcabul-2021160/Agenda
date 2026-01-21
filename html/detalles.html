@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil del Contacto - Agenda Web</title>
+    <link rel="stylesheet" href="../Style/detalles.css">
+</head>
+<body>
+    <div class="container">
+        <a href="contactos.html" class="back-link">← Regresar a contactos</a>
+        
+        <div class="profile-card">
+            <div class="profile-header">
+                <div class="profile-avatar" id="det-avatar">JP</div>
+            </div>
+            
+            <div class="profile-body">
+                <h2 class="contact-name" id="det-name">Juan Pérez</h2>
+                <span class="contact-tag" id="det-tag">Amigo / Trabajo</span>
+                
+                <div class="info-list">
+                    <div class="info-item">
+                        <span class="label">Teléfono</span>
+                        <span class="value" id="det-phone">555-0101</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="label">Correo Electrónico</span>
+                        <span class="value" id="det-email">juan.perez@email.com</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="label">Dirección</span>
+                        <span class="value">Ciudad de Guatemala</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="label">Notas</span>
+                        <span class="value">Persona de contacto para el proyecto de laboratorio.</span>
+                    </div>
+                </div>
+
+                <div class="action-buttons">
+                    <button class="btn-edit">Editar Contacto</button>
+                    <button class="btn-fav">★ Agregar a Favoritos</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const infoContactos = {
+            "xavier": { nombre: "Xavier Estrada", tel: "555-0101", correo: "xavier@email.com", avatar: "XE", tag: "Trabajo" },
+            "daniel": { nombre: "Daniel Lopez", tel: "555-0102", correo: "daniel@email.com", avatar: "DL", tag: "Amigo" },
+            "diego": { nombre: "Diego Salazar", tel: "555-0103", correo: "diego@email.com", avatar: "DS", tag: "Familia" },
+            "matias": { nombre: "Matias Quino", tel: "555-0104", correo: "matias@email.com", avatar: "MQ", tag: "Trabajo" },
+            "angel": { nombre: "Angel Martinez", tel: "555-0105", correo: "angel@email.com", avatar: "AM", tag: "Amigo" }
+        };
+
+        
+        const params = new URLSearchParams(window.location.search);
+        const contactoId = params.get('id');
+
+        if (contactoId && infoContactos[contactoId]) {
+            const c = infoContactos[contactoId];
+            document.getElementById('det-name').innerText = c.nombre;
+            document.getElementById('det-phone').innerText = c.tel;
+            document.getElementById('det-email').innerText = c.correo;
+            document.getElementById('det-avatar').innerText = c.avatar;
+            document.getElementById('det-tag').innerText = c.tag;
+        }
+    </script>
+</body>
+</html>
