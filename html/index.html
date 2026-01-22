@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -22,7 +22,7 @@
                 <input type="password" id="password" placeholder="********" required>
             </div>
 
-            <button type="button" onclick="window.location.href='contactos.html'" class="btn-login">
+            <button type="button" onclick="manejarLogin()" class="btn-login">
                 Entrar
             </button>
             
@@ -31,5 +31,26 @@
             </div>
         </form>
     </div>
+
+    <script>
+        function manejarLogin() {
+            
+            const correoIngresado = document.getElementById('email').value;
+            const passIngresada = document.getElementById('password').value;
+
+            
+            if (correoIngresado.trim() === "" || passIngresada.trim() === "") {
+                alert("Por favor, completa todos los campos.");
+                return;
+            }
+
+         
+            localStorage.setItem('userEmail', correoIngresado);
+            localStorage.setItem('userPass', passIngresada);
+
+            
+            window.location.href = 'contactos.html';
+        }
+    </script>
 </body>
 </html>
