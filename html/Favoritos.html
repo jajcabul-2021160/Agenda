@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Favoritos - Agenda Web</title>
+    <link rel="stylesheet" href="../Style/Favoritos.css">
+</head>
+<body>
+    <nav class="navbar">
+        <h1>Mi Agenda</h1>
+        <div class="nav-links">
+            <a href="contactos.html">Contactos</a>
+            <a href="Favoritos.html" class="active">Favoritos</a>
+            <a href="Perfil.html">Perfil</a>
+            <a href="ToDoList.html">ToDo List Pendientes</a>
+        </div>
+    </nav>
+
+    <main class="container">
+        <div class="header-section">
+            <h2>Contactos Favoritos ★</h2>
+        </div>
+
+        <div class="contacts-grid">
+            <div class="contact-card" onclick="window.location.href='detalles.html?id=xavier'">
+                <div class="avatar">XE</div>
+                <div class="info">
+                    <h3>Xavier Estrada</h3>
+                    <p>555-0101</p>
+                </div>
+            </div>
+
+            <div class="contact-card" onclick="window.location.href='detalles.html?id=diego'">
+                <div class="avatar">DS</div>
+                <div class="info">
+                    <h3>Diego Salazar</h3>
+                    <p>555-0103</p>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
